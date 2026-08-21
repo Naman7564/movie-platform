@@ -10,7 +10,7 @@ services:
     environment:
       - DEBUG=True
       - SECRET_KEY=django-insecure-filmora-movie-platform-secret-key-2026-prod
-      - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,backend,0.0.0.0
+      - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,backend,0.0.0.0,129.159.21.153,129.159.21.153
     volumes:
       - backend_db:/app/
       - backend_media:/app/media/
