@@ -76,7 +76,7 @@ export const HomePage: React.FC = () => {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-10 sm:space-y-14 pb-16">
       {/* 1. Hero Showcase Section */}
       <Hero movies={featuredMovies.length > 0 ? featuredMovies : latestMovies} />
 
@@ -98,8 +98,8 @@ export const HomePage: React.FC = () => {
 
       {/* 4. Explore Genres Section */}
       {genres.length > 0 && (
-        <section className="py-8 max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="flex items-center justify-between mb-4">
+        <section className="py-8 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-5">
             <div>
               <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-rose-500" /> Browse by Genre

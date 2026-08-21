@@ -48,12 +48,12 @@
 }
 
 .hero-gradient {
-  background: linear-gradient(180deg, rgba(7, 9, 19, 0) 0%, rgba(7, 9, 19, 0.8) 60%, #070913 100%),
-              linear-gradient(90deg, #070913 0%, rgba(7, 9, 19, 0.85) 35%, rgba(7, 9, 19, 0.2) 70%, rgba(7, 9, 19, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(7, 9, 19, 0.2) 0%, rgba(7, 9, 19, 0.7) 60%, #070913 100%),
+              linear-gradient(90deg, #070913 0%, rgba(7, 9, 19, 0.9) 35%, rgba(7, 9, 19, 0.4) 65%, rgba(7, 9, 19, 0.85) 100%);
 }
 
 .hero-mobile-gradient {
-  background: linear-gradient(180deg, rgba(7, 9, 19, 0.2) 0%, rgba(7, 9, 19, 0.85) 50%, #070913 100%);
+  background: linear-gradient(180deg, rgba(7, 9, 19, 0.3) 0%, rgba(7, 9, 19, 0.85) 50%, #070913 100%);
 }
 
 .hide-scrollbar::-webkit-scrollbar {

@@ -18,7 +18,7 @@ export const PopularPage: React.FC = () => {
 
   return (
     <div className="pt-24 pb-16 min-h-[80vh]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 mb-6">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight flex items-center gap-3">
           <Flame className="w-8 h-8 text-rose-500" /> Popular on Filmora
         </h1>

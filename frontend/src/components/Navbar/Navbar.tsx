@@ -38,11 +38,11 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#070913]/90 backdrop-blur-md border-b border-white/10 shadow-lg py-3'
-          : 'bg-gradient-to-b from-black/80 to-transparent py-4'
+          ? 'bg-[#070913]/95 backdrop-blur-md border-b border-white/10 shadow-lg py-3'
+          : 'bg-gradient-to-b from-[#070913]/90 via-[#070913]/40 to-transparent py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between gap-4">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
         {/* Brand Logo */}
         <Link to="/" className="flex items-center gap-2 group flex-shrink-0">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center text-white shadow-md shadow-rose-600/30 group-hover:scale-105 transition-transform">

@@ -114,7 +114,7 @@ export const MovieDetailsPage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#070913] via-transparent to-[#070913]" />
 
         {/* Back Link */}
-        <div className="absolute top-24 left-4 sm:left-8 z-20">
+        <div className="absolute top-24 left-4 sm:left-6 lg:left-8 z-20">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full glass hover:bg-white/10 text-xs font-semibold text-white transition-all shadow-md"
@@ -125,7 +125,7 @@ export const MovieDetailsPage: React.FC = () => {
       </div>
 
       {/* Main Content Details Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 -mt-60 relative z-20">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 -mt-60 relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Poster & Quick Info */}
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start space-y-5">
@@ -225,17 +225,19 @@ export const MovieDetailsPage: React.FC = () => {
                 </h3>
                 <span className="text-xs text-slate-400">HD 1080p Embed</span>
               </div>
-              <YouTubePlayer
-                videoId={movie.youtube_video_id}
-                title={movie.title}
-              />
+              <div className="w-full max-w-[1150px] mx-auto">
+                <YouTubePlayer
+                  videoId={movie.youtube_video_id}
+                  title={movie.title}
+                />
+              </div>
             </div>
 
-            {/* Detailed Movie Information Card */}
-            <div className="glass p-6 rounded-2xl border border-white/5 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+            {/* Detailed Movie Information Card (Metadata Panel) */}
+            <div className="glass p-6 rounded-2xl border border-white/5 grid grid-cols-1 sm:grid-cols-2 gap-5 text-xs sm:text-sm">
               {movie.director && (
                 <div>
-                  <span className="text-slate-400 block text-xs uppercase tracking-wider font-bold mb-0.5">
+                  <span className="text-slate-400 block text-xs uppercase tracking-wider font-bold mb-1">
                     Director
                   </span>
                   <p className="text-white font-medium">{movie.director}</p>
@@ -244,7 +246,7 @@ export const MovieDetailsPage: React.FC = () => {
 
               {movie.writers && (
                 <div>
-                  <span className="text-slate-400 block text-xs uppercase tracking-wider font-bold mb-0.5">
+                  <span className="text-slate-400 block text-xs uppercase tracking-wider font-bold mb-1">
                     Writers
                   </span>
                   <p className="text-white font-medium">{movie.writers}</p>
@@ -253,8 +255,8 @@ export const MovieDetailsPage: React.FC = () => {
 
               {movie.cast && (
                 <div className="sm:col-span-2">
-                  <span className="text-slate-400 block text-xs uppercase tracking-wider font-bold mb-0.5">
-                    Cast
+                  <span className="text-slate-400 block text-xs uppercase tracking-wider font-bold mb-1">
+                    Stars / Cast
                   </span>
                   <p className="text-white font-medium">{movie.cast}</p>
                 </div>
@@ -262,7 +264,7 @@ export const MovieDetailsPage: React.FC = () => {
 
               {movie.country && (
                 <div>
-                  <span className="text-slate-400 block text-xs uppercase tracking-wider font-bold mb-0.5">
+                  <span className="text-slate-400 block text-xs uppercase tracking-wider font-bold mb-1">
                     Country of Origin
                   </span>
                   <p className="text-white font-medium">{movie.country}</p>
@@ -271,7 +273,7 @@ export const MovieDetailsPage: React.FC = () => {
 
               {movie.release_date && (
                 <div>
-                  <span className="text-slate-400 block text-xs uppercase tracking-wider font-bold mb-0.5">
+                  <span className="text-slate-400 block text-xs uppercase tracking-wider font-bold mb-1">
                     Release Date
                   </span>
                   <p className="text-white font-medium">{movie.release_date}</p>

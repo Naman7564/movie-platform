@@ -8,7 +8,7 @@ export const MyListPage: React.FC = () => {
   const { myList, removeFromList } = useMyList();
 
   return (
-    <div className="pt-24 pb-16 max-w-7xl mx-auto px-4 sm:px-8 min-h-[80vh]">
+    <div className="pt-24 pb-16 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 min-h-[80vh]">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight flex items-center gap-3">

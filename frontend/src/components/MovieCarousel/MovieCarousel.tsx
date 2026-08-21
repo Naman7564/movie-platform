@@ -32,8 +32,8 @@ export const MovieCarousel: React.FC<MovieCarouselProps> = ({
   }
 
   return (
-    <section className="py-6 relative">
-      <div className="flex items-end justify-between mb-4 px-4 sm:px-8 max-w-7xl mx-auto">
+    <section className="py-8 relative">
+      <div className="flex items-end justify-between mb-5 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
         <div>
           <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
             {title}
@@ -53,14 +53,14 @@ export const MovieCarousel: React.FC<MovieCarouselProps> = ({
           <button
             onClick={() => handleScroll('left')}
             aria-label="Scroll left"
-            className="p-2 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-white/5 transition-all shadow-md active:scale-95"
+            className="p-2.5 rounded-full bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/10 transition-all shadow-md active:scale-95"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
           <button
             onClick={() => handleScroll('right')}
             aria-label="Scroll right"
-            className="p-2 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-white/5 transition-all shadow-md active:scale-95"
+            className="p-2.5 rounded-full bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/10 transition-all shadow-md active:scale-95"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
@@ -69,7 +69,7 @@ export const MovieCarousel: React.FC<MovieCarouselProps> = ({
 
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto hide-scrollbar px-4 sm:px-8 max-w-7xl mx-auto scroll-smooth py-2"
+        className="flex gap-4 sm:gap-5 overflow-x-auto hide-scrollbar px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto scroll-smooth py-2"
       >
         {movies.map((movie) => (
           <div key={movie.id} className="flex-shrink-0">

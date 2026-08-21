@@ -35,14 +35,14 @@ export const Hero: React.FC<HeroProps> = ({ movies }) => {
   const releaseYear = currentMovie.release_year || (currentMovie.release_date ? new Date(currentMovie.release_date).getFullYear() : '2026');
 
   return (
-    <div className="relative w-full h-[78vh] min-h-[560px] max-h-[820px] overflow-hidden select-none">
+    <div className="relative w-full h-[620px] sm:h-[660px] lg:h-[700px] min-h-[520px] max-h-[760px] overflow-hidden select-none">
       {/* Background Backdrop Image */}
       <div className="absolute inset-0">
         <img
           key={currentMovie.id}
           src={backdropUrl}
           alt={currentMovie.title}
-          className="w-full h-full object-cover object-top opacity-60 transition-opacity duration-1000 transform scale-105 animate-in fade-in"
+          className="w-full h-full object-cover object-center opacity-65 transition-opacity duration-1000 transform scale-105 animate-in fade-in"
           onError={(e) => {
             (e.target as HTMLImageElement).src = getMoviePoster(currentMovie);
           }}
@@ -53,8 +53,8 @@ export const Hero: React.FC<HeroProps> = ({ movies }) => {
       </div>
 
       {/* Hero Content Area */}
-      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-start items-start pt-20 sm:pt-24 pb-12 z-10">
-        <div className="max-w-2xl space-y-4 mt-0">
+      <div className="relative h-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-start pt-16 sm:pt-20 pb-12 z-10">
+        <div className="max-w-2xl lg:max-w-3xl space-y-4 mt-0">
           {/* Tags & Rating */}
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-semibold text-slate-300">
             {currentMovie.genres?.slice(0, 3).map((g) => (
@@ -77,12 +77,12 @@ export const Hero: React.FC<HeroProps> = ({ movies }) => {
           </div>
 
           {/* Title */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white drop-shadow-2xl leading-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white drop-shadow-2xl leading-[1.08] max-w-2xl">
             {currentMovie.title}
           </h1>
 
           {/* Description */}
-          <p className="text-sm sm:text-base text-slate-300 line-clamp-3 max-w-xl font-normal drop-shadow">
+          <p className="text-sm sm:text-base text-slate-300 line-clamp-3 max-w-xl font-normal leading-relaxed drop-shadow">
             {currentMovie.description}
           </p>
 
@@ -121,7 +121,7 @@ export const Hero: React.FC<HeroProps> = ({ movies }) => {
 
         {/* Hero Carousel Navigation Controls & Thumbnails */}
         {movies.length > 1 && (
-          <div className="absolute right-4 sm:right-8 bottom-12 hidden lg:flex items-center gap-3">
+          <div className="absolute right-4 sm:right-6 lg:right-8 bottom-10 hidden lg:flex items-center gap-3">
             <button
               onClick={() => setCurrentIndex((prev) => (prev === 0 ? movies.length - 1 : prev - 1))}
               aria-label="Previous featured movie"
@@ -158,7 +158,7 @@ export const Hero: React.FC<HeroProps> = ({ movies }) => {
 
         {/* Small indicators for mobile */}
         {movies.length > 1 && (
-          <div className="flex lg:hidden items-center justify-center gap-1.5 pt-6">
+          <div className="flex lg:hidden items-center justify-center gap-1.5 pt-6 self-center">
             {movies.map((_, idx) => (
               <button
                 key={idx}

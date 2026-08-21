@@ -4,7 +4,7 @@ import { Film, Heart } from 'lucide-react';
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-950/80 border-t border-white/5 pt-12 pb-8 mt-20 text-slate-400 text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         {/* Col 1: Brand */}
         <div className="space-y-3 md:col-span-1">
           <Link to="/" className="flex items-center gap-2">
@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
         <p className="flex items-center gap-1">
           Built with <Heart className="w-3.5 h-3.5 text-rose-500 fill-current" /> for modern cinema discovery.
         </p>
