@@ -30,13 +30,13 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   const releaseYear = movie.release_year || (movie.release_date ? new Date(movie.release_date).getFullYear() : '2026');
 
   return (
-    <div className={`flex-shrink-0 group relative select-none ${sizeClasses[size]} ${className}`}>
-      <div className="relative aspect-[2/3] w-full overflow-hidden rounded-xl border border-white/5 bg-slate-900 shadow-md transition-colors duration-300 group-hover:border-rose-500/40 group-hover:shadow-lg group-hover:shadow-rose-950/30">
+    <div className={`group relative select-none w-full max-w-[280px] ${sizeClasses[size]} ${className}`}>
+      <div className="relative aspect-[2/3] w-full max-w-[280px] overflow-hidden rounded-2xl border border-white/5 bg-slate-900 shadow-md transition-colors duration-300 group-hover:border-rose-500/40 group-hover:shadow-lg group-hover:shadow-rose-950/30">
         <img
           src={posterUrl}
           alt={movie.title}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover m-0 p-0 block transition-transform duration-500 group-hover:scale-105"
           onError={(e) => {
             (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=600&auto=format&fit=crop';
           }}

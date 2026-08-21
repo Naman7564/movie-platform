@@ -72,7 +72,9 @@ export const MovieCarousel: React.FC<MovieCarouselProps> = ({
         className="flex gap-4 overflow-x-auto hide-scrollbar px-4 sm:px-8 max-w-7xl mx-auto scroll-smooth py-2"
       >
         {movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} size={size} />
+          <div key={movie.id} className="flex-shrink-0">
+            <MovieCard movie={movie} size={size} />
+          </div>
         ))}
       </div>
     </section>
