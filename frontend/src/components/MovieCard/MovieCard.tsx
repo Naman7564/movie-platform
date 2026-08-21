@@ -31,7 +31,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
 
   return (
     <div className={`group relative select-none w-full max-w-[280px] ${sizeClasses[size]} ${className}`}>
-      <div className="relative aspect-[2/3] w-full max-w-[280px] overflow-hidden rounded-2xl border border-white/5 bg-slate-900 shadow-md transition-colors duration-300 group-hover:border-rose-500/40 group-hover:shadow-lg group-hover:shadow-rose-950/30">
+      <div className="relative aspect-[19/6] w-full max-w-[280px] overflow-hidden rounded-2xl border border-white/5 bg-slate-900 shadow-md transition-colors duration-300 group-hover:border-rose-500/40 group-hover:shadow-lg group-hover:shadow-rose-950/30">
         <img
           src={posterUrl}
           alt={movie.title}

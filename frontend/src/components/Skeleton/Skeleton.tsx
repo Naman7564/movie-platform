@@ -3,7 +3,7 @@ import React from 'react';
 export const MovieCardSkeleton: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = () => {
   return (
     <div className="w-full animate-pulse">
-      <div className="aspect-[2/3] w-full rounded-2xl bg-slate-800/60 border border-white/5 mb-2.5" />
+      <div className="aspect-[19/6] w-full rounded-2xl bg-slate-800/60 border border-white/5 mb-2.5" />
       <div className="h-4 bg-slate-800/80 rounded w-3/4 mb-1.5" />
       <div className="h-3 bg-slate-800/50 rounded w-1/2" />
     </div>
