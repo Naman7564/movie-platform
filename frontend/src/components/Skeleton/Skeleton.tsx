@@ -12,8 +12,8 @@ export const MovieCardSkeleton: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = () => 
 
 export const HeroSkeleton: React.FC = () => {
   return (
-    <div className="w-full h-[78vh] min-h-[560px] bg-slate-900/60 animate-pulse relative flex flex-col justify-end p-8 sm:p-16 max-w-7xl mx-auto">
-      <div className="h-6 w-48 bg-slate-800 rounded-full mb-4" />
+    <div className="w-full h-[78vh] min-h-[560px] bg-slate-900/60 animate-pulse relative flex flex-col justify-start items-start pt-20 sm:pt-24 p-8 sm:p-16 max-w-7xl mx-auto">
+      <div className="h-6 w-48 bg-slate-800 rounded-full mb-4 mt-0" />
       <div className="h-12 w-3/4 max-w-xl bg-slate-800 rounded-xl mb-4" />
       <div className="h-4 w-full max-w-lg bg-slate-800/60 rounded mb-2" />
       <div className="h-4 w-2/3 max-w-md bg-slate-800/60 rounded mb-6" />

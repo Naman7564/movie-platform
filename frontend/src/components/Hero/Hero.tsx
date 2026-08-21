@@ -53,8 +53,8 @@ export const Hero: React.FC<HeroProps> = ({ movies }) => {
       </div>
 
       {/* Hero Content Area */}
-      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-end pb-12 sm:pb-16 z-10">
-        <div className="max-w-2xl space-y-4">
+      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-start items-start pt-20 sm:pt-24 pb-12 z-10">
+        <div className="max-w-2xl space-y-4 mt-0">
           {/* Tags & Rating */}
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-semibold text-slate-300">
             {currentMovie.genres?.slice(0, 3).map((g) => (
