@@ -31,7 +31,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
 
   return (
     <div className={`flex-shrink-0 group relative select-none ${sizeClasses[size]} ${className}`}>
-      <div className="relative aspect-[2/3] w-full rounded-2xl overflow-hidden bg-slate-900 shadow-lg border border-white/5 transition-all duration-300 group-hover:scale-[1.03] group-hover:shadow-2xl group-hover:shadow-rose-950/30 group-hover:border-rose-500/30">
+      <div className="relative aspect-[2/3] w-full overflow-hidden rounded-xl border border-white/5 bg-slate-900 shadow-md transition-colors duration-300 group-hover:border-rose-500/40 group-hover:shadow-lg group-hover:shadow-rose-950/30">
         <img
           src={posterUrl}
           alt={movie.title}
@@ -73,7 +73,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
           className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5"
         >
           <div className="flex items-center justify-center my-auto">
-            <div className="w-12 h-12 rounded-full bg-rose-600/90 text-white flex items-center justify-center shadow-lg shadow-rose-600/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+            <div className="w-12 h-12 rounded-full bg-rose-600/90 text-white flex items-center justify-center shadow-lg shadow-rose-600/50">
               <Play className="w-5 h-5 fill-current ml-0.5" />
             </div>
           </div>
